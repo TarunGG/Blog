@@ -7,4 +7,4 @@ class Posts(models.Model):
     description = models.TextField()
     created_at = models.DateField(editable=False)
     last_updated = models.DateField()
-    username = models.CharField(max_length=100,default=None) 
+    username = models.CharField(max_length=100,default=None, null=True) 
