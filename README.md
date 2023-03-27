@@ -42,7 +42,7 @@ In above request if any error occurs then it will return an error message in the
 
 **_Request_** :-
 Method: **GET**
-https://blog-api-1.herokuapp.com/all/1
+https://blog-8xih.onrender.com/all/1
 
 **_Response_** :-
 ```JSON
@@ -63,7 +63,7 @@ In above request if any error occurs then it will return an error message in the
 Send a **POST** request to this endpoint to create a new blog(s) in the database.The format of the request will be:
 
 **_Request_** :-
-https://blog-api-1.herokuapp.com/create/
+https://blog-8xih.onrender.com/create/
 METHOD : **POST**
 ```JSON
 {  
@@ -95,11 +95,11 @@ In above request if any error occurs then it will return an error message in the
 ```
 
 4. **_create/\<id\>/_** :-
-   Send a PUT request to this endpoint to update a specific blog with the provided id from the database.The format of the request will be:
+   Send a **PUT** request to this endpoint to update a specific blog with the provided id from the database.The format of the request will be:
 
 **_Request_** :-
-Method: PUT
-https://blog-api-1.herokuapp.com/create/1
+Method: **PUT**
+https://blog-8xih.onrender.com/create/1
 
 ```JSON
 {  
