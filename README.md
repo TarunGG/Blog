@@ -38,7 +38,7 @@ Send a **GET** request to this endpoint to get all the blogs in the database.The
 In above request if any error occurs then it will return an error message in the response with success = false.
 
 
-2. ***all/<id>/*** :-
+2. ***all/\<id\>/*** :-
 Send a **GET** request to this endpoint to get a specific blog with the provided id from the database.The format of the response will be:
 
 ***Request*** :-
