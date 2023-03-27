@@ -71,7 +71,7 @@ METHOD : **POST**
 ]  
 }  
 
-In above request you can create as many blogs as you want by adding them in the blogs array. Here "title" and "description" are required fields where as "username" field is optional.
+In above request you can create as many blogs as you want by adding them in the blogs array. Here **"title"** and **"description"** are **required** fields where as **"username"** field is **optional**.
 In above request if any error occurs then it will return an error message in the response with success = false.
 
 **_Response_** :-
