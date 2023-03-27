@@ -14,6 +14,7 @@ To get started just copy this link <https://blog-api-1.herokuapp.com/> and paste
    Send a **GET** request to this endpoint to get all the blogs in the database.The format of the response will be:
 
 **_Response_** :-
+```JSON
 {  
     "posts": [  
                 {  
@@ -31,7 +32,8 @@ To get started just copy this link <https://blog-api-1.herokuapp.com/> and paste
                     "username": "John"  
                 }  
             ]  
-}  
+}
+```
 
 In above request if any error occurs then it will return an error message in the response with success = false.
 
@@ -43,6 +45,7 @@ Method: **GET**
 https://blog-api-1.herokuapp.com/all/1
 
 **_Response_** :-
+```JSON
 {  
     "post": {  
                 "id": 1,  
@@ -51,6 +54,7 @@ https://blog-api-1.herokuapp.com/all/1
                 "username": "John"  
             }  
 }  
+```
 
 In above request if any error occurs then it will return an error message in the response with success = false.
 
@@ -61,6 +65,7 @@ Send a **POST** request to this endpoint to create a new blog(s) in the database
 **_Request_** :-
 https://blog-api-1.herokuapp.com/create/
 METHOD : **POST**
+```JSON
 {  
     "posts": [  
                 {  
@@ -70,11 +75,13 @@ METHOD : **POST**
                 }  
             ]  
 }  
+```
 
 In above request you can create as many blogs as you want by adding them in the blogs array. Here **"title"** and **"description"** are **required** fields where as **"username"** field is **optional**.
 In above request if any error occurs then it will return an error message in the response with success = false.
 
 **_Response_** :-
+```JSON
 {  
 "success": "true",  
 "posts": [  
@@ -85,6 +92,7 @@ In above request if any error occurs then it will return an error message in the
             }  
         ]  
 }  
+```
 
 4. **_create/\<id\>/_** :-
    Send a PUT request to this endpoint to update a specific blog with the provided id from the database.The format of the request will be:
@@ -93,25 +101,31 @@ In above request if any error occurs then it will return an error message in the
 Method: PUT
 https://blog-api-1.herokuapp.com/create/1
 
+```JSON
 {  
     "title": "New title",  
     "description": "New description",  
     "usename": "New username"  
 }  
+```
 
 In above request you have to provide atleast one field to update the blog.If you provide even one of any of the three fields then the request will be processed otherwise it will return an error. Here you can't update the id of the blog.
 
 **_Response_** :-  
+```JSON
 {  
     "success": "true",  
     "response": "Post updated successfully"  
 }  
+```
 
 5. **_delete/\<id\>/_** :-
    Send a **DELETE** request to this endpoint to delete a specific blog with the provided id from the database.The format of the response will be:
 
 **_Response_** :-  
+```JSON
 {  
 "success": "true",  
 "response": "Post with id = (id) successfully deleted."  
 }  
+```
