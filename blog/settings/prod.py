@@ -6,8 +6,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DATABASES = {
-    "database":dj_database_url(os.environ.get("DATABASE_URL"))
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    
 }
 
-DEBUG = False
+DEBUG = True
 ADMIN_ENABLE = False
+
+ALLOWED_HOSTS = ['*']

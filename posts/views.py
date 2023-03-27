@@ -11,7 +11,7 @@ def index (request) :
     if request.method == "GET":
         
         routes = { "routes": [
-                "/","/create","/create/<id>","/all","/all/<id>", "/delete/<id>"
+                "","create","create/<id>","all","all/<id>", "delete/<id>"
             ]
         }
         
@@ -62,8 +62,13 @@ def update_post(request, *args, **kwargs):
         
         if username != None:
             post.username = username
-        post.save()
-        return JsonResponse({"success":"true","respons":"Post updated successfully"})
+        
+        if username != None or description != None or title != None:
+            post.last_updated = date.today()
+            post.save()
+        else:
+            return JsonResponse({"success":"false","error":"No data provided to update"})
+        return JsonResponse({"success":"true","response":"Post updated successfully"})
     else:
         return JsonResponse({"success":"false","error":"Wrong method, use 'PUT' method for this endpoint"})
 
@@ -113,6 +118,6 @@ def delete_post(request,*args, **kwargs):
             return JsonResponse({"success":"false","error":"no id provided"})
         
         post.delete()
-        return JsonResponse({"success":"true","status":"post with id " + str(id) + " successfully deleted"})
+        return JsonResponse({"success":"true","status":"Post with id=" + str(id) + " successfully deleted"})
     else :
         return JsonResponse({"success":"flase","error":"Wrong request method use 'DELETE' method for this endpoint"})
