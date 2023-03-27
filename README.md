@@ -6,7 +6,7 @@ It is an API developed in python that allows you to create a blog with a title, 
 
 ### Getting Started:
 
-To get started just copy this link <https://blog-api-1.herokuapp.com/> and paste it in postman or thunder client and you are good to go. Send a **GET** request to the link to get all available endpoints of the API.
+To get started just copy this link https://blog-8xih.onrender.com/ and paste it in postman or thunder client and you are good to go. Send a **GET** request to the link to get all available endpoints of the API.
 
 ### API Endpoints:
 
